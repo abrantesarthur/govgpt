@@ -1,19 +1,24 @@
 {
-  "name": "govgpt",
-  "version": "1.0.0",
+  "author": "Arthur Abrantes",
+  "name": "@govgpt/govgpt",
   "description": "A chatbot for asking questions about the expenses of Brazilian government institutions and officials",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "1.0.0",
+  "license": "GPL-3.0-or-later",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abrantesarthur/govgpt.git"
   },
-  "author": "Arthur Abrantes",
-  "license": "GPL-3.0-or-later",
+  "homepage": "https://github.com/abrantesarthur/govgpt#readme",
   "bugs": {
     "url": "https://github.com/abrantesarthur/govgpt/issues"
   },
-  "homepage": "https://github.com/abrantesarthur/govgpt#readme"
+  "engines": {
+    "node": "=21.6.0",
+    "npm": "10.2.4",
+    "yarn": "=1.22.21"
+  },
+  "workspaces": [
+    "@govgpt/source-data"
+  ]
 }

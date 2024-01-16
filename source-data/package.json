@@ -1,0 +1,22 @@
+{
+  "name": "@govgpt/source-data",
+  "version": "1.0.0",
+  "description": "The service that fetches, transforms, and aggregates the source data into files that power the application's knowledge",
+  "main": "index.js",
+  "author": "Arthur Abrantes",
+  "license": "GPL-3.0-or-later",
+  "private": false,
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "start": "node ../build/@govgpt/source-data/setup.js",
+    "dev": "ts-node --transpile-only ./src/setup.ts"
+  },
+  "dependencies": {
+    "@types/node": "^20.11.3",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  }
+}

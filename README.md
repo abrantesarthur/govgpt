@@ -1,9 +1,5 @@
 # govgpt
 
-## API Dados Abertos Camara dos Deputados
-
-[link](https://dadosabertos.camara.leg.br/swagger/api.html)
-
 ### Plano
 
 - Aggregate and transform every congressman's data into a single CSV file
@@ -13,6 +9,14 @@
 - Create an assistant and uplaod the file to it
 - V2: Add functions to help the assistant answer specific questions
 
-## API Portal da Transparencia
+## Using Locally
 
-[link](https://api.portaldatransparencia.gov.br/swagger-ui/index.html)
+To develop locally, you must have the following programs installed:
+
+- nvm (0.39.0)
+- node (21.6.0)
+- yarn (1.22.21)
+
+## Data Source APIs
+
+To power this service, we rely on the data made available by the APIs [Portal da Transparencia](https://api.portaldatransparencia.gov.br/swagger-ui/index.html) and [Dados Abertos](https://dadosabertos.camara.leg.br/swagger/api.html).
