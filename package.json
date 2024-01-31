@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "license": "GPL-3.0-or-later",
   "private": true,
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abrantesarthur/govgpt.git"
@@ -19,6 +20,6 @@
     "yarn": "=1.22.21"
   },
   "workspaces": [
-    "@govgpt/source-data"
+    "source-data"
   ]
 }

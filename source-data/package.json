@@ -5,6 +5,7 @@
   "main": "index.js",
   "author": "Arthur Abrantes",
   "license": "GPL-3.0-or-later",
+  "type": "module",
   "private": false,
   "scripts": {
     "build": "tsc --build",
@@ -13,7 +14,9 @@
     "dev": "ts-node --transpile-only ./src/setup.ts"
   },
   "dependencies": {
+    "@types/axios": "^0.14.0",
     "@types/node": "^20.11.3",
+    "axios": "^1.6.7",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
