@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        /* Basic Options */
+        "target": "es2022",
+        "module": "ES2022",
+        "allowJs": false,
+        "checkJs": false,
+        "jsx": "react",
+        "declaration": true,
+        "composite": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        /* Strict type-checking options */
+        "strict": true,
+        "skipLibCheck": true,
+        "useUnknownInCatchVariables": false,
+
+        /* Additional checks */
+        "noUnusedLocals": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+
+        /* Module resolution option */
+        "moduleResolution": "Node",
+        "baseUrl": ".",
+        "types": [],
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "forceConsistentCasingInFileNames": true,
+    }
+}
