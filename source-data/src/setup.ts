@@ -1,4 +1,4 @@
-import { getAllDeputies } from "./routes/deputies/getAllDeputies.js"
+import { getAllDeputies } from "./routes/deputies"
 
 const main = () => {
     getAllDeputies();

@@ -1,4 +1,4 @@
-import { DADOS_ABERTOS_BASE_URL } from "../constants.js";
+import { DADOS_ABERTOS_BASE_URL } from "../constants";
 
 /** The base path for retrieving "deputies" data */
 export const DEPUTIES_BASE_PATH = "/deputados";

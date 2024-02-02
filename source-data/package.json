@@ -5,12 +5,11 @@
   "main": "index.js",
   "author": "Arthur Abrantes",
   "license": "GPL-3.0-or-later",
-  "type": "module",
   "private": false,
   "scripts": {
     "build": "tsc --build",
     "clean": "tsc --build --clean",
-    "start": "node ../build/@govgpt/source-data/setup.js",
+    "start": "yarn build && node ../build/@govgpt/source-data/setup.js",
     "dev": "ts-node --transpile-only ./src/setup.ts"
   },
   "dependencies": {

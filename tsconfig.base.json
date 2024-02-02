@@ -2,7 +2,7 @@
     "compilerOptions": {
         /* Basic Options */
         "target": "es2022",
-        "module": "ES2022",
+        "module": "CommonJS",
         "allowJs": false,
         "checkJs": false,
         "jsx": "react",
