@@ -9,16 +9,16 @@
   "scripts": {
     "build": "tsc --build",
     "clean": "tsc --build --clean",
-    "start": "yarn build && node ../build/@govgpt/source-data/setup.js",
-    "dev": "ts-node --transpile-only ./src/setup.ts"
+    "start": "yarn build && node ../build/@govgpt/source-data/main.js",
+    "dev": "ts-node --transpile-only ./src/main.ts"
   },
   "dependencies": {
     "@types/axios": "^0.14.0",
-    "@types/node": "^20.11.3",
     "axios": "^1.6.7",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@types/node": "^20.11.16",
     "ts-node": "^10.9.2"
   }
 }

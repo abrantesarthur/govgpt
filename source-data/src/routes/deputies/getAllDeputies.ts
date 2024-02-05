@@ -11,5 +11,12 @@ import { paginate } from "../helpers/paginate";
 export const getAllDeputies = async (): Promise<Deputy[]> => paginate<Deputy>({
         url: GET_ALL_DEPUTIES_URL,
         getNextUrl: () => undefined,
-        getCurrentPage: (res) => (res.data.dados as Deputy[]),
+        getCurrentPage: (res) => (res.data.dados).map((d: any) => ({
+            id: d.id,
+            deputyUri: d.uri,
+            deputyName: d.nome,
+            partyAcronym: d.siglaPartido,
+            stateAcronym: d.siglaUf,
+            photoUrl: d.urlFoto,
+        })),
     });

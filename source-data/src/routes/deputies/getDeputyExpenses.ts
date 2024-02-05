@@ -1,4 +1,4 @@
-import { GET_DEPUTY_EXPENSES_URL, YEAR } from "./constants";
+import { GET_DEPUTY_EXPENSES_URL, MONTH_NUMBER_TO_STRING, YEAR } from "./constants";
 import { paginate } from "../helpers/paginate";
 import { DadosAbertosLink, DadosAbertosLinkRelationship, Expense } from "./types";
 
@@ -21,5 +21,14 @@ export const getDeputyExpenses = async ({
             }
         },
         getNextUrl: (res) => (res.data.links as DadosAbertosLink[]).filter((l) => l.rel === DadosAbertosLinkRelationship.Next)[0]?.href,
-        getCurrentPage: (res) => (res.data.dados as Expense[]),
+        getCurrentPage: (res) => (res.data.dados).map((d: any) => ({
+            year: d.ano,
+            month: MONTH_NUMBER_TO_STRING[d.mes as string],
+            day: Number((d.dataDocumento as string).substring(8)),
+            expenseType: d.tipoDespesa,
+            amount: d.valorDocumento,
+            receiptUrl: d.urlDocumento,
+            sellerName: d.nomeFornecedor,
+            sellerCpnj: d.cnpjCpfFornecedor,
+        })),
     });

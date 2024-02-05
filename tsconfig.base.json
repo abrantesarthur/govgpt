@@ -23,9 +23,9 @@
         /* Module resolution option */
         "moduleResolution": "Node",
         "baseUrl": ".",
-        "types": [],
+        "types": ["node"],
         "esModuleInterop": true,
         "resolveJsonModule": true,
         "forceConsistentCasingInFileNames": true,
-    }
+    },
 }

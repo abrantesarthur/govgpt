@@ -95,22 +95,17 @@ export interface Deputy {
     /** the Deputy ID */
     id: number;
     /** the URI from where to retrieve the Deputy */
-    uri: string;
+    deputyUri: string;
     /** the Deputy's name */
-    nome: string;
+    deputyName: string;
     /** the Deputy's political party's acronym */
     partyAcronym: PartyAcronym;
-    /** the URI from where to retrieve the Party  */
-    partyUri: string;
     /** the acronym of the state */
     stateAcronym: StateAcronym;
-    /** the legislature ID */
-    legislatureId: number;
     /** the photo URL */
     photoUrl: string;
-    /** the Deputy's email address */
-    email: string;
 }
+
 
 export enum DadosAbertosLinkRelationship {
     Self = "self",
@@ -129,25 +124,20 @@ export interface DadosAbertosLink {
 
 
 export interface Expense {
+    /** The year when the expense occurred */
     year: number,
+    /** The month when the expense occurred */
     month: number,
-    expenseType: string, 
+    /** The day when the expense was made */
+    day: number,    
+    /** The type of the expense */
+    expenseType: string,
+    /** The amount of the expense */
+    amount: number,
+    /** The url where to fetch the receipt */
+    receiptUrl: string,
+    /** The name of the seller */
+    sellerName: string,
+    /** The cnpj of the seller */
+    sellerCnpj: string,
 }
-
-// ano: 2023,
-// mes: 9,
-// tipoDespesa: ,
-// codDocumento: 7631700,
-// tipoDocumento: 'Nota Fiscal Eletrônica',
-// codTipoDocumento: 4,
-// dataDocumento: '2023-09-13',
-// numDocumento: '348293',
-// valorDocumento: 262.99,
-// urlDocumento: 'http://www.camara.leg.br/cota-parlamentar/nota-fiscal-eletronica?ideDocumentoFiscal=7631700',
-// nomeFornecedor: '031 - 302 NORTE - CASCOL COMBUSTIVEIS PARA VEICULOS LTDA',
-// cnpjCpfFornecedor: '00306597003112',
-// valorLiquido: 250,
-// valorGlosa: 12.99,
-// numRessarcimento: '',
-// codLote: 1981411,
-// parcela: 0
