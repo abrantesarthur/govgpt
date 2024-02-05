@@ -17,7 +17,7 @@ export const paginate = <T>({
     /** the request options */
     options?: AxiosRequestConfig
     /** a function that takes in the response and returns the next url to fetch data from */
-    getNextUrl: (response: AxiosResponse) => string,
+    getNextUrl: (response: AxiosResponse) => string | undefined,
     /** a function that, given the response, returns the page to be added to the results */
     getCurrentPage: (response: AxiosResponse) => T[],
 }): Promise<T[]> => {
