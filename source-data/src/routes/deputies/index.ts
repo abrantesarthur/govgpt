@@ -1,2 +1,2 @@
 export * from './getAllDeputies';
-export * from './getDeputy';
+export * from './getDeputyExpenses';

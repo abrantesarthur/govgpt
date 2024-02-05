@@ -1,10 +1,11 @@
-import { getAllDeputies, getDeputy } from "./routes/deputies"
+import { getAllDeputies, getDeputyExpenses } from "./routes/deputies"
 
 const main = async () => {
     const deputies = await getAllDeputies();
-    console.log({deputies});
-    const deputy = await getDeputy({id: deputies[0].id});
-    console.log({deputy});
+    // console.log({deputies});
+    const expenses = await getDeputyExpenses({deputyId: deputies[2].id});
+    console.log()
+    console.log({expenses, count: expenses.length});
 }
 
 /** Run the program. */

@@ -111,3 +111,43 @@ export interface Deputy {
     /** the Deputy's email address */
     email: string;
 }
+
+export enum DadosAbertosLinkRelationship {
+    Self = "self",
+    Next = "next",
+    First = "first",
+    Last = "last",
+};
+
+/** The type of the entries within the "links" field returned by the "Dados Abertos API" */
+export interface DadosAbertosLink {
+    /** The link's relationship to the current page */
+    rel: DadosAbertosLinkRelationship,
+    /** The url where to fetch the page that is related to the current page */
+    href: string,
+}
+
+
+export interface Expense {
+    year: number,
+    month: number,
+    expenseType: string, 
+}
+
+// ano: 2023,
+// mes: 9,
+// tipoDespesa: ,
+// codDocumento: 7631700,
+// tipoDocumento: 'Nota Fiscal Eletrônica',
+// codTipoDocumento: 4,
+// dataDocumento: '2023-09-13',
+// numDocumento: '348293',
+// valorDocumento: 262.99,
+// urlDocumento: 'http://www.camara.leg.br/cota-parlamentar/nota-fiscal-eletronica?ideDocumentoFiscal=7631700',
+// nomeFornecedor: '031 - 302 NORTE - CASCOL COMBUSTIVEIS PARA VEICULOS LTDA',
+// cnpjCpfFornecedor: '00306597003112',
+// valorLiquido: 250,
+// valorGlosa: 12.99,
+// numRessarcimento: '',
+// codLote: 1981411,
+// parcela: 0
