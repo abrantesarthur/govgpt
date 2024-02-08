@@ -1,4 +1,4 @@
-import { CSV_HEADER_KEYS } from "./constants";
+import { CSV_HEADER_KEYS, SOURCE_DATA_FILE_PATH } from "./constants";
 import { getAllDeputies, getDeputyExpenses } from "./routes/deputies"
 import * as fs from 'fs';
 import { Deputy, Expense } from "./routes/deputies/types";
@@ -14,9 +14,6 @@ const main = async () => {
 
     console.log(`Fetched ${deputies.length} deputies.`)
 
-    // TODO: fetch this from an environment variable
-    const filePath = '/Users/arthur/Documents/govgpt/testFile.txt';
-
     // start timer
     const t0 = new Date();
 
@@ -26,7 +23,7 @@ const main = async () => {
 
     // write the csv header
     const csvHeader = `${CSV_HEADER_KEYS.join(',')}\n`;
-    fs.writeFileSync(filePath, csvHeader);
+    fs.writeFileSync(SOURCE_DATA_FILE_PATH, csvHeader);
 
     // get each deputy's expenses
     for (let i = 0; i < deputies.length; i += 1) {
@@ -53,7 +50,7 @@ const main = async () => {
         }).join('');
 
         // write the expenses to the CSV file
-        fs.appendFileSync(filePath, expensesCsv, {});
+        fs.appendFileSync(SOURCE_DATA_FILE_PATH, expensesCsv, {});
         
         const t2 = new Date();
         const dt = getInterval({t1, t2});

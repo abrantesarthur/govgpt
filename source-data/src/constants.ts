@@ -24,3 +24,6 @@ export const ONE_SEC = 1000 * ONE_MS;
 /** one minute */
 export const ONE_MIN = 60 * ONE_SEC;
 
+// TODO: this should probably be fetched from an environment variable
+/** the path to the file where the source data should be stored */
+export const SOURCE_DATA_FILE_PATH = __dirname + `./sourceData.csv`;
