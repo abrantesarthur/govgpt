@@ -4,7 +4,12 @@ import * as fs from 'fs';
 import { Deputy, Expense } from "./routes/deputies/types";
 import { getInterval } from "./helpers";
 
-// TODO: create a script to call this funtion instead of doing 'yarn start'
+/**
+ * TODO: create a script to call this funtion instead of doing 'yarn start'
+ * TODO: create a helper to fetch deputy expenses. This way, when we want to
+ *       extend this service to fetch other types of information (e.g., expenses
+ *       from cities, projects of law, etc), this scales more nicely.
+ */
 const main = async () => {
 
     console.log("Getting deputies...")
