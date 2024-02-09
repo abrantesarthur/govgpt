@@ -1,0 +1,10 @@
+{
+  "name": "assistant",
+  "version": "1.0.0",
+  "description": "This service feeds govGPT's source-data into AI models to power the application's knowledge.",
+  "main": "main.js",
+  "repository": "https://github.com/abrantesarthur/govgpt",
+  "author": "Arthur Abrantes",
+  "license": "GPL-3.0-or-later",
+  "private": false
+}
