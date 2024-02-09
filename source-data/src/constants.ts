@@ -1,3 +1,4 @@
+import path from "path";
 import { Deputy, Expense } from "./routes/deputies/types";
 
 /** The CSV header keys */
@@ -24,5 +25,6 @@ export const ONE_SEC = 1000 * ONE_MS;
 /** one minute */
 export const ONE_MIN = 60 * ONE_SEC;
 
+/** TODO: add year to the file name */
 /** the path to the file where the source data should be stored */
-export const DEPUTY_EXPENSES_FILE_PATH = __dirname + `./sourceData.csv`;
+export const DEPUTY_EXPENSES_FILE_PATH = path.join(__dirname, 'files', 'deputyExpenses.csv');
