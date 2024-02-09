@@ -1,0 +1,10 @@
+{
+    "extends": "../tsconfig.base.json",
+    "compilerOptions": {
+        "outDir": "../build/@govgpt/assistant",
+        "tsBuildInfoFile": "../build/@govgpt/assistant.tsbuildinfo",
+        "rootDir": "src",
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "build"],
+}

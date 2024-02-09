@@ -19,7 +19,8 @@
     "yarn": "=1.22.21"
   },
   "workspaces": [
-    "source-data"
+    "source-data",
+    "assistant"
   ],
   "dependencies": {
   }
